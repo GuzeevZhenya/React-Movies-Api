@@ -21,9 +21,9 @@ export const Main = () => {
     return (
         <main className="container content">
             <Search searchMovies={searchMovies} />
-            {movies.length ? (
+            {movies ? movies.length ? (
                 <Movies movies={movies} />
-            ) : <Preloader />}
+            ) : <Preloader />:<h3>Nothis</h3>}
 
         </main>
     )
