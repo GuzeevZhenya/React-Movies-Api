@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 
 export const Search = (props) => {
   const [search, setSearch] = useState("");
@@ -10,10 +10,9 @@ export const Search = (props) => {
   };
 
   const handleFilter = (event) => {
-      setType(event.target.dataset.type);
-      props.searchMovies(search, type);
-    };
-
+    setType(event.target.dataset.type);
+    props.searchMovies(search, type);
+  };
 
   return (
     <div className="row">
@@ -28,7 +27,10 @@ export const Search = (props) => {
             onChange={(e) => setSearch(e.target.value)}
             onKeyDown={(e) => handleKey(e)}
           />
-          <button className="btn" onClick={(e) => props.searchMovies(search,type)}>
+          <button
+            className="btn"
+            onClick={(e) => props.searchMovies(search, type)}
+          >
             Search
           </button>
         </div>
@@ -41,8 +43,8 @@ export const Search = (props) => {
               name="group3"
               type="radio"
               data-type="all"
-                          onChange={(e) => handleFilter(e)}
-                          checked={type === 'all'}
+              onChange={(e) => handleFilter(e)}
+              checked={type === "all"}
             />
             <span>All</span>
           </label>
@@ -54,8 +56,8 @@ export const Search = (props) => {
               name="group3"
               type="radio"
               data-type="movie"
-                          onChange={(e) => handleFilter(e)}
-                          checked={type === 'movie'}
+              onChange={(e) => handleFilter(e)}
+              checked={type === "movie"}
             />
             <span>Movies only</span>
           </label>
@@ -67,8 +69,8 @@ export const Search = (props) => {
               name="group3"
               type="radio"
               data-type="series"
-                          onChange={(e) => handleFilter(e)}
-                          checked={type === 'series'}
+              onChange={(e) => handleFilter(e)}
+              checked={type === "series"}
             />
             <span>Series only</span>
           </label>

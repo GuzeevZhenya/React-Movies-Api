@@ -2,7 +2,7 @@
   "name": "movies-react",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://GuzeevZhenya.github.io/React-Movie",
+  "homepage": "https://GuzeevZhenya.github.io/React-Movies-Api",
   "dependencies": {
     "@testing-library/jest-dom": "^5.15.0",
     "@testing-library/react": "^11.2.7",
